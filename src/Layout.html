@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="./output.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="flex sticky top-0 z-50 bg-white shadow justify-between items-center p-4">
+        <!-- Logo -->
+        <a href="#"><img class="rounded-full w-16 h-16" src="https://picsum.photos/200" alt="logo-image"></a>
+        <!-- Links (visible on desktop) -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- Signup Button (visible on desktop) -->
+        <button class="hidden md:block bg-green-500 font-medium px-6 py-2 rounded-full hover:bg-sky-400 text-white">Signup</button>
+        <!-- Mobile Menu Icons (visible on mobile) -->
+        <button id="mobile-menu-open" class="md:hidden mobile-icon">
+            <svg class="h-10 w-10 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button id="mobile-menu-close" class="md:hidden cancel-icon hidden">
+            <svg class="h-10 w-10 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden mobile-menu hidden sticky top-0 z-50 bg-white shadow p-4">
+        <ul class="flex flex-col items-center space-y-6">
+            <li><a class="text-black font-medium hover:text-sky-400" href="#services">Services</a></li>
+            <li><a class="text-black font-medium hover:text-sky-400" href="#pricing">Pricing</a></li>
+            <li><a class="text-black font-medium hover:text-sky-400" href="#about">About</a></li>
+            <li><a class="text-black font-medium hover:text-sky-400" href="#">Contact</a></li>
+            <li>
+                <button class="bg-green-500 font-medium px-6 py-2 rounded-full hover:bg-sky-400 text-white">Signup</button>
+            </li>
+        </ul>
+    </div>
+
+<!-- Hero section -->
+ <section id="about" class="container mx-auto mt-12 flex flex-col md:flex-row">
+<div class="md:w-1/2 text-center">
+    <p class="mt-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non doloremque praesentium expedita pariatur optio saepe consequuntur sapiente, natus ad eum voluptates labore cupiditate quae deserunt, officia nisi repellat quia vel.
+    </p>
+    <button class="bg-indigo-500 px-6 py-2 font-medium rounded-full mt-6 text-white">Get Started</button>
+</div>
+<div class="md:w-1/2">
+    <img class="mx-auto" src="./assets/hero.png" alt="hero">
+</div>
+ </section>
+
+ <!-- Main Section -->
+  <main id="services" class="container mx-auto flex flex-col md:flex-row gap-12 mt-12 ">
+    <div class="md:w-1/3 text-center flex flex-col items-center">
+        <h1 class="text-2xl">Web Development</h1>
+        <img class="w-40 h-40" src="./assets/website.svg" alt="website">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam reprehenderit natus possimus repellendus accusamus rem ab culpa ea repellat.</p>
+    </div>
+    <div class="md:w-1/3 text-center flex flex-col items-center">
+        <h1 class="text-2xl">Mobile App Development</h1>
+        <img class="w-40 h-40" src="./assets/mobile_app.svg" alt="mobile_app">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam reprehenderit natus possimus repellendus accusamus rem ab culpa ea repellat.</p>
+    </div>
+    <div class="md:w-1/3 text-center flex flex-col items-center">
+        <h1 class="text-2xl">UI/UX</h1>
+        <img class="w-40 h-40" src="./assets/designer.svg" alt="designer">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam reprehenderit natus possimus repellendus accusamus rem ab culpa ea repellat.</p>
+    </div>
+</main>
+
+<!-- Pricing Section -->
+
+<section id="pricing" class="container mx-auto mt-6">
+    <div class="text-center">
+        <h1 class="font-bold text-green-500 text-3xl">Pricing</h1>
+        <p class="text-2xl">Offers multiple packages for Monthly and Yearly Subscriptions</p>
+        <p class="text-2xl">Featured plans are here</p>
+    </div>
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-10 mt-4 mx-10">
+        <div class="mt-4 relative bg-gray-200  border-4 border-indigo-500 w-100 rounded-2xl hover:shadow-2xl text-center">
+            <h1 class="font-bold text-5xl">$99</h1>
+<h2 class="text-green-500 mb-3 font-bold">Basic</h2>
+<p>All the basic features are included</p>
+<ul class="ml-4 mb-10">
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill='currentColor' fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                </svg>
+        </div>
+        <div>
+            Core Business System
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill='currentColor' fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                </svg>
+        </div>
+        <div>
+            Core Business System
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="currentColor" opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                <path fill="currentColor" d="M15 12H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div>
+            Customized Features
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="currentColor" opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                <path fill="currentColor" d="M15 12H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div>
+            Dual Infrastructure
+        </div>
+    </li>
+</ul>
+<button class="absolute bottom-0 lg:translate-y-5 transform translate-y-5 md:translate-y-9 -translate-x-16 bg-indigo-500 md:px-6 px-3 py-3 font-medium rounded-full mt-6 text-white">Get Started</button>
+        </div>
+        <div class="bg-gray-200 mt-4 relative  border-4 border-indigo-500 border-dashed w-100 rounded-2xl hover:shadow-2xl text-center">
+            <h1 class="font-bold text-5xl">$199</h1>
+<h2 class="text-green-500 mb-3 font-bold">Advanced</h2>
+<p>All the basic features are included</p>
+<ul class="ml-4 mb-10">
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill='currentColor' fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                </svg>
+        </div>
+        <div>
+            Core Business System
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill='currentColor' fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                </svg>
+        </div>
+        <div>
+            Core Business System
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="currentColor" opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                <path fill="currentColor" d="M15 12H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div>
+            Customized Features
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="currentColor" opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                <path fill="currentColor" d="M15 12H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div>
+            Dual Infrastructure
+        </div>
+    </li>
+</ul>
+<button class="absolute bottom-0 transform lg:translate-y-5 translate-y-5 md:translate-y-9 -translate-x-16 bg-indigo-500 md:px-6 px-3 py-3 font-medium rounded-full mt-6 text-white">Get Started</button>
+
+
+        </div>
+        <div class="mt-4 relative bg-gray-200 border-4 border-indigo-500 w-100 rounded-2xl hover:shadow-2xl text-center">
+            <h1 class="font-bold text-5xl">$299</h1>
+<h2 class="text-green-500 mb-3 font-bold">Business</h2>
+<p>All the basic features are included</p>
+<ul class="ml-4 mb-10">
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill='currentColor' fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                </svg>
+        </div>
+        <div>
+            Core Business System
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill='currentColor' fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                </svg>
+        </div>
+        <div>
+            Core Business System
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="currentColor" opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                <path fill="currentColor" d="M15 12H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div>
+            Customized Features
+        </div>
+    </li>
+    <li class="flex items-center mt-4">
+        <div>
+            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="currentColor" opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                <path fill="currentColor" d="M15 12H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+        </div>
+        <div>
+            Dual Infrastructure
+        </div>
+    </li>
+</ul>
+<button class="absolute bottom-0 transform translate-y-5 lg:translate-y-5 md:translate-y-9  -translate-x-16 bg-indigo-500 md:px-4 px-3 py-3 font-medium rounded-full mt-6 text-white">Get Started</button>
+
+        </div>
+    </div>
+</section>
+
+<!-- Story Section -->
+
+<div class="container mx-auto mt-12 ">
+    <div class="text-center">
+        <h1>Recent Updates</h1>
+        <h1 class="text-5xl">Featured Stories</h1>
+    </div>
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-4 mt-10 mx-10">
+        <div class="bg-gray-200 rounded-2xl hover:shadow-2xl text-center">
+            <img class="w-full h-60" src="https://picsum.photos/200" alt="story">
+            <h1 class="mt-4 text-2xl text-indigo-500">Google Rankings</h1>
+            <p class="font-thin my-4">Make it connect with every client world wide</p>
+            <a href="#" class="font-bold text-indigo-500  hover:text-black">Read More</a>
+        </div>
+        <div class="bg-gray-200 rounded-2xl hover:shadow-2xl text-center">
+            <img class="w-full h-60" src="https://picsum.photos/200" alt="story">
+            <h1 class="mt-4 text-2xl text-indigo-500">Communication</h1>
+            <p class="font-thin my-4">Best communication for the business</p>
+            <a href="#" class="font-bold text-indigo-500  hover:text-black">Read More</a>
+        </div>
+        <div class="bg-gray-200 rounded-2xl hover:shadow-2xl text-center">
+            <img class="w-full h-60" src="https://picsum.photos/200" alt="story">
+            <h1 class="mt-4 text-2xl text-indigo-500">Remote Working</h1>
+            <p class="font-thin my-4">Remote connectivity for consistent</p>
+            <a href="#" class="font-bold text-indigo-500  hover:text-black">Read More</a>
+        </div>
+    </div>
+</div>
+
+    <!-- footer -->
+    <footer class="bg-gray-200 mt-12">
+        <div class="container mx-auto flex flex-wrap justify-between pt-12 pb-8">
+            <!-- 25% -->
+            <div class="w-full sm:w-1/4 mb-6 sm:mb-0">
+                <p class="font-medium text-2xl">Ak</p>
+            </div>
+            <!-- 50% -->
+            <div class="w-full sm:w-1/2 flex flex-wrap justify-between mb-6 sm:mb-0">
+                <div class="w-1/2 sm:w-auto pr-6 sm:pr-24 mb-6 sm:mb-0">
+                    <h2 class="text-2xl font-bold">Links</h2>
+                    <ul class="space-y-2 mt-4">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="w-1/2 sm:w-auto pr-6 sm:pr-24 mb-6 sm:mb-0">
+                    <h2 class="text-2xl font-bold">Links</h2>
+                    <ul class="space-y-2 mt-4">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="w-1/2 sm:w-auto pr-6 sm:pr-24 mb-6 sm:mb-0">
+                    <h2 class="text-2xl font-bold">Links</h2>
+                    <ul class="space-y-2 mt-4">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="w-1/2 sm:w-auto pr-6 sm:pr-24 mb-6 sm:mb-0">
+                    <h2 class="text-2xl font-bold">Links</h2>
+                    <ul class="space-y-2 mt-4">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 25% -->
+            <div class="w-full sm:w-1/4 flex justify-center sm:justify-end gap-4">
+                <button>
+                    <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#0F0F0F"/>
+                    </svg>
+                </button>
+                <button>
+                    <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.19752C5.34054 9.49223 5.8522 9.65578 6.43657 9.82292C6.64729 9.88435 6.82425 10.0378 6.91162 10.2404C6.99899 10.443 6.98579 10.6712 6.87694 10.8639C6.49669 11.573 5.60215 12.1953 4.57642 12.6182C5.18935 13.0133 5.89601 13.2287 6.66547 13.2762C7.27509 13.3148 7.97961 13.2522 8.71758 13.0794C9.00829 13.0091 9.29282 13.1228 9.47034 13.3469C9.64787 13.571 9.69392 13.8767 9.58549 14.1424C9.0396 15.4174 7.87193 16.479 6.43696 17.1384C7.29297 17.2961 8.33384 17.2232 9.45642 16.8288C11.1866 16.212 12.6076 15.1348 13.8162 13.5733C14.822 12.2578 15.6765 10.4782 16.3398 8.27643C15.6155 8.39148 14.6636 8.42198 13.7918 7.92126C12.6955 7.27439 12.1898 6.01561 12.1898 4.49986C12.1898 4.23626 12.2552 3.99077 12.3733 3.7802C11.7951 4.17319 11.1954 4.79816 10.7134 5.58747C10.2557 6.32829 9.96872 7.26598 9.91802 8.42592C9.89299 9.02804 10.1414 9.57879 10.7484 9.80845Z" fill="#0F0F0F"/>
+                    </svg>
+                </button>
+                <button>
+                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z" fill="#000000"/>
+                        </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOpenButton = document.getElementById('mobile-menu-open');
+        const mobileMenuCloseButton = document.getElementById('mobile-menu-close');
+
+        mobileMenuOpenButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuOpenButton.classList.add('hidden');
+            mobileMenuCloseButton.classList.remove('hidden');
+        });
+
+        mobileMenuCloseButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuOpenButton.classList.remove('hidden');
+            mobileMenuCloseButton.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
